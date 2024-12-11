@@ -1,4 +1,4 @@
-from doubt import discord_logging
+from doubt.doubt import discord_logging
 from tqdm import tqdm
 import time
 
