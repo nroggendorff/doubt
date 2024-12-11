@@ -2,7 +2,9 @@ from doubt import discord_logging
 from tqdm import tqdm
 import time
 
-WEBHOOK_URL = "https://discord.com/api/webhooks/1316467098884771850/LorKoIV2JHRCzEbNXEJMU8MWAP0vy9dSY0wIRtWGmNZl8zHMyuRmIqHCcmJsElmvBgoG"
+import os
+
+WEBHOOK_URL = f"https://discord.com/api/webhooks/{os.getenv('WEBHOOK_ID')}/{os.getenv('WEBHOOK_TOKEN')}"
 
 @discord_logging(webhook_url=WEBHOOK_URL, app_name="MyApp")
 def my_function():
